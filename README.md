@@ -18,7 +18,7 @@ The folder `webapi_docker_compose` contains a little more sophisticated app with
 - To stop it, run the script `stop_deployment.sh`
 
 ### Webapi via Kubernetes
-The folder `webapi_k8s` contains the same app as the one for docker compose, but ready to be run in k8s. For that, you need to install k8s first (either docker desktop for Mac or minicube for arbitrary platforms). 
+The folder `webapi_k8s` contains the same app as the one for docker compose, but ready to be run in k8s. For that, you need to install k8s first (either docker desktop or minicube). 
 - To start it, run the script `start_deployment.sh`, which builds the image from the source code and starts both backend and frontend 
 - Once started, run the command `kubectl get service` and checkthe details of the service. It will say something like `web          NodePort    10.110.9.12     <none>        80:31784/TCP   11s`, which tells you that you can access it via `localhost:31784` (the port mapped to 80)
 - To stop it, run the script `stop_deployment.sh`
